@@ -1,0 +1,102 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+    RewriteBase /siscec/
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+
+
+<IfModule mod_ssl.c>
+<VirtualHost 192.168.133.12:443>
+        ServerAdmin webmaster@localhost
+        #ServerName 1.2.3.4:443
+        ServerName jubarte.riodasostras.rj.gov.br:443
+        # ServerAlias jubarte.riodasostras.rj.gov.br
+         DocumentRoot "/var/www/html/jubarte/FrontEnd"
+
+        Alias /ciente "/var/www/html/ciente/FrontEnd/"
+
+         Alias /siscec "/var/www/html/siscec/public/"
+        <Directory "/var/www/html/siscec/public/">
+          Options Indexes FollowSymLinks MultiViews
+          AllowOverride all
+          Order allow,deny
+          Allow from all
+
+          RewriteEngine On
+          RewriteBase /siscec/
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^(.*)/$ /$1 [L,R=301]
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteRule ^ index.php [L]
+          Header add Access-Control-Allow-Origin "*"
+          Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+          Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+        </Directory>
+
+
+        <Directory "/var/www/html/jubarte/FrontEnd/">
+          Order deny,allow
+          Allow from 192.168.2.0/24
+          Allow from 192.168.66.29/24
+          Allow from 10.0.0.0/24
+          Deny from all
+        </Directory>
+
+        Alias /cdn "/var/www/html/cdn/"
+        <Directory "/var/www/html/cdn">
+         # Options Indexes FollowSymLinks MultiViews
+ # AllowOverride all
+         # Require local         <-- to develop on this PC
+         # Require ip 192.168.1  <-- to access the server from another PC
+         # Require all granted   <-- to allow the world to ses your site
+         Order allow,deny
+         Allow from all
+        </Directory>
+
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        SSLEngine on
+        SSLCertificateFile /var/www/html/siscec/certificado/certificate.crt
+        SSLCertificateKeyFile /var/www/html/siscec/certificado/certificate.key
+
+        <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                        SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+        SSLOptions +StdEnvVars
+         </FilesMatch>
+                <Directory /usr/lib/cgi-bin>
+                                SSLOptions +StdEnvVars
+                </Directory>
+                BrowserMatch "MSIE [2-6]" \
+                        nokeepalive ssl-unclean-shutdown \
+                                downgrade-1.0 force-response-1.0
+                # MSIE 7 and newer should be able to use keepalive
+                BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
+
+</VirtualHost>
+</IfModule>
+

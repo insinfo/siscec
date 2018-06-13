@@ -1,0 +1,488 @@
+/* DataTable Container */
+.modernDataTable {
+    position: relative;
+    width: 100%;
+    /*overflow-y: hidden;
+    overflow-x: auto;*/
+}
+
+.modernDataTable table {
+    width: 100%;
+    color: #333333;
+}
+
+.modernDataTable table thead tr {
+    border-top: solid 1px #dddddd;
+    border-bottom: solid 1px #bbbbbb;
+}
+
+.modernDataTable table thead tr th {
+    padding: 4px 25px;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+}
+
+.modernDataTable table tbody tr {
+    border-top: solid 1px #dddddd;
+    cursor: pointer;
+}
+.modernDataTable table tbody tr:hover{
+    background: rgba(128, 128, 128, 0.13);
+}
+
+.modernDataTable table tbody tr td {
+    padding: 4px 25px;
+    text-align: left;
+    /*position: relative;*/
+}
+
+.dataTableFooter {
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid #bbb;
+    padding: 20px 20px 0 20px;
+    position: relative;
+}
+
+.dataTablePaginationContainer {
+/ /*display: flex;
+    justify-content:right;*/
+display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.dataTablePaginationContainer ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dataTablePaginationContainer ul li {
+    margin-left: 2px;
+}
+
+.dataTablePaginationContainer ul li a {
+    display: inline-block;
+    padding: 9px;
+    min-width: 38px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333333;
+    border-radius: 3px;
+    outline: 0;
+    font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5384616;
+}
+
+.dataTablePaginationContainer ul li .dataTableBtnPagination {
+    /*background-color: #dddddd;
+    color: #333333;
+    padding: 6px 9px;*/
+}
+
+.dataTablePaginationContainer ul .disabled a {
+    cursor: default;
+    background-color: transparent;
+    color: #bbb;
+}
+
+.dataTablePaginationContainer ul .active a {
+    color: #fff;
+    background-color: #455A64;
+}
+
+.dataTablePaginationContainer ul li a i {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: Icomoon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.dataTableBtnPrevious:after {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    content: "\e9c8";
+}
+
+.dataTableBtnNext:after {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    content: "\e9cb";
+}
+
+/*CHECKBOX DE SELEÇÃO DE LINHA DO DATATABLE */
+.dataTableCheckBox {
+    position: relative;
+    top: 9px;
+}
+
+.dataTableCheckBox [type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dataTableCheckBox [type="checkbox"] + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dataTableCheckBox [type="checkbox"]:checked + label:before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #0076af;
+    border-bottom: 2px solid #0076af;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+.dataTableCheckBox [type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    border: 2px solid #b4b4b4;
+    border-radius: 1px;
+    margin-top: 2px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.dataTableColSelect {
+    width: 50px;
+}
+
+/* CABEÇARIO  DATATABLE */
+.dataTableHeader {
+    height: 70px;
+    position: relative;
+}
+
+/* CAMPO DE PESQUISA  DATATABLE */
+.dataTableSearchField input[type=text] {
+    border: none;
+    border-bottom: solid 1px #dddddd;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.dataTableSearchField input[type=text]:hover {
+    border-bottom: solid 1px;
+    border-bottom-color: #ff890d;
+    box-shadow: 0 1px 0 #ff890d;
+}
+
+.dataTableSearchField input[type=text]:focus {
+    border-bottom: solid 1px;
+    border-bottom-color: #0076af;
+    box-shadow: 0 1px 0 #0076af;
+}
+
+.dataTableSearchField {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.dataTableSearchField i {
+    display: inline-block;
+    top: 0;
+    left: -15px;
+    position: relative;
+    font-style: normal;
+}
+
+.dataTableSearchField i:after {
+    content: "\e98e";
+    font-family: 'icomoon';
+    font-size: 12px;
+    color: #999999;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*BOTÕES DE AÇÕES DO DATATABLE*/
+.dataTableActions {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.dataTableActionBtn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    text-align: center;
+}
+
+.dataTableActionBtn i {
+    color: #454545;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    position: relative;
+    top: 4px;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.dataTableActionBtn:hover {
+    background-color: #dddddd;
+    color: #333333;
+    border-radius: 3px;
+}
+
+/*.dataTableBtnUpdate:before{
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: 0.8em;
+    content:"\f021";
+}*/
+
+.dataTableBtnUpdate:before {
+    font-family: "Material Icons";
+    font-style: normal;
+    content: "refresh";
+}
+
+/*
+.dataTableBtnUpdate:before {
+    font-family: Icomoon;
+    font-style: normal;
+    content: "\e9fb";
+    font-size: 19px;
+}*/
+
+.dataTableBtnSave:before {
+    font-family: FontAwesome;
+    font-style: normal;
+    content: "\f0c7";
+}
+
+.dataTableBtnAdd:before {
+    font-family: "Material Icons";
+    font-style: normal;
+    content: "note_add";
+    /*content: "\ea0f";*/
+}
+
+.dataTableBtnDelete:before {
+    font-family: "Material Icons";
+    font-style: normal;
+    content: "delete";
+    /*content: "\e99f";*/
+}
+
+.dataTableBtnSearch:before {
+    font-family: "Material Icons";
+    font-style: normal;
+    content: "search";
+    /*content: "\e98e";*/
+}
+
+/* FIM BOTÕES DE AÇÕES*/
+/**/
+.dataTableTdBool .dataTableBoolIconNo:before {
+    color: #f44336;
+    font-family: Icomoon;
+    font-style: normal;
+    font-size: 20px;
+    content: "\ed6a";
+    display: inline-block;
+}
+
+.dataTableTdBool .dataTableBoolIconYes:before {
+    color: #4caf50;
+    font-family: Icomoon;
+    font-style: normal;
+    font-size: 20px;
+    content: "\ed6e";
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.dataTableTdBool .dataTableBoolLabelNo {
+    display: inline-block;
+    font-weight: 500;
+    padding: 2px 5px 1px 5px;
+    line-height: 1.5384616;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    border-radius: 2px;
+    border-color: #F44336;
+    background-color: #F44336;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.dataTableTdBool .dataTableBoolLabelYes {
+    display: inline-block;
+    font-weight: 500;
+    padding: 2px 5px 1px 5px;
+    line-height: 1.5384616;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    border-radius: 2px;
+    border-color: #4CAF50;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.modernDataTableLoading {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 200px);
+    background: rgba(255, 255, 255, 0.52);
+    text-align: center;
+
+}
+
+.modernDataTableLoading i {
+    display: block;
+    -webkit-animation: rotation 1s linear infinite;
+    -o-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    color: #173ad0;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    min-width: 1em;
+    text-align: center;
+    font-size: 35px;
+    vertical-align: middle;
+    position: relative;
+    top: 35%;
+    left: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.modernDataTableLoading i::before {
+    content: "\eb51";
+}
+
+.dataTableSortingAsc, .dataTableSortingDesc {
+    cursor: pointer;
+}
+
+.dataTableSortingAsc, .dataTableSortingDesc:hover{
+    background: rgba(128, 128, 128, 0.09);
+}
+
+.dataTableSortingAsc:after {
+    content: '\e9c2';
+    font-family: 'icomoon';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 12px;
+    margin-top: -6px;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dataTableSortingDesc:after {
+    content: '\e9c1';
+    font-family: 'icomoon';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 12px;
+    margin-top: -6px;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* dataTable div Container */
+.dataTableItemsPerPageContainer {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /*width: fit-content;
+    height: fit-content;*/
+    min-width: 50px;
+}
+
+.dataTableSelectItemsPerPage {
+    width: 60px;
+    /* border: none;
+     height: 38px;
+     min-width: 38px;
+     outline: none;
+     background: white;
+     opacity: 0.8;
+     font-size: 18px;*/
+    /* hide the default arrow
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;*/
+}
+
+.dataTableSelectItemsPerPage::-ms-expand {
+    /* display: none; hide the default arrow in ie10 and ie11 */
+}

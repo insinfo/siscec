@@ -1,0 +1,281 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--scripts-prepend-node-path=auto' ]
+2 info using npm@2.15.9
+3 info using node@v4.6.1
+4 verbose readDependencies loading dependencies from X:\siscec\package.json
+5 verbose install where, deps [ 'X:\\siscec',
+5 verbose install   [ 'axios',
+5 verbose install     'bootstrap-sass',
+5 verbose install     'cross-env',
+5 verbose install     'jquery',
+5 verbose install     'laravel-mix',
+5 verbose install     'lodash',
+5 verbose install     'vue' ] ]
+6 verbose install where, peers [ 'X:\\siscec', [] ]
+7 verbose installManyTop reading for lifecycle X:\siscec\package.json
+8 info preinstall @
+9 verbose readDependencies loading dependencies from X:\siscec\package.json
+10 silly cache add args [ 'axios@^0.16.2', null ]
+11 verbose cache add spec axios@^0.16.2
+12 silly cache add args [ 'bootstrap-sass@^3.3.7', null ]
+13 verbose cache add spec bootstrap-sass@^3.3.7
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'axios@^0.16.2',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'axios',
+14 silly cache add   rawSpec: '^0.16.2',
+14 silly cache add   spec: '>=0.16.2 <0.17.0',
+14 silly cache add   type: 'range' }
+15 silly addNamed axios@>=0.16.2 <0.17.0
+16 verbose addNamed ">=0.16.2 <0.17.0" is a valid semver range for axios
+17 silly addNameRange { name: 'axios', range: '>=0.16.2 <0.17.0', hasData: false }
+18 silly mapToRegistry name axios
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry data Result {
+21 silly mapToRegistry   raw: 'axios',
+21 silly mapToRegistry   scope: null,
+21 silly mapToRegistry   name: 'axios',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag' }
+22 silly mapToRegistry uri https://registry.npmjs.org/axios
+23 verbose addNameRange registry:https://registry.npmjs.org/axios not in flight; fetching
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'bootstrap-sass@^3.3.7',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'bootstrap-sass',
+24 silly cache add   rawSpec: '^3.3.7',
+24 silly cache add   spec: '>=3.3.7 <4.0.0',
+24 silly cache add   type: 'range' }
+25 silly addNamed bootstrap-sass@>=3.3.7 <4.0.0
+26 verbose addNamed ">=3.3.7 <4.0.0" is a valid semver range for bootstrap-sass
+27 silly addNameRange { name: 'bootstrap-sass',
+27 silly addNameRange   range: '>=3.3.7 <4.0.0',
+27 silly addNameRange   hasData: false }
+28 silly mapToRegistry name bootstrap-sass
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'bootstrap-sass',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   name: 'bootstrap-sass',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://registry.npmjs.org/bootstrap-sass
+33 verbose addNameRange registry:https://registry.npmjs.org/bootstrap-sass not in flight; fetching
+34 silly cache add args [ 'cross-env@^5.0.1', null ]
+35 verbose cache add spec cross-env@^5.0.1
+36 silly cache add parsed spec Result {
+36 silly cache add   raw: 'cross-env@^5.0.1',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'cross-env',
+36 silly cache add   rawSpec: '^5.0.1',
+36 silly cache add   spec: '>=5.0.1 <6.0.0',
+36 silly cache add   type: 'range' }
+37 silly addNamed cross-env@>=5.0.1 <6.0.0
+38 verbose addNamed ">=5.0.1 <6.0.0" is a valid semver range for cross-env
+39 silly addNameRange { name: 'cross-env', range: '>=5.0.1 <6.0.0', hasData: false }
+40 silly mapToRegistry name cross-env
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry data Result {
+43 silly mapToRegistry   raw: 'cross-env',
+43 silly mapToRegistry   scope: null,
+43 silly mapToRegistry   name: 'cross-env',
+43 silly mapToRegistry   rawSpec: '',
+43 silly mapToRegistry   spec: 'latest',
+43 silly mapToRegistry   type: 'tag' }
+44 silly mapToRegistry uri https://registry.npmjs.org/cross-env
+45 verbose addNameRange registry:https://registry.npmjs.org/cross-env not in flight; fetching
+46 silly cache add args [ 'jquery@^3.1.1', null ]
+47 verbose cache add spec jquery@^3.1.1
+48 silly cache add parsed spec Result {
+48 silly cache add   raw: 'jquery@^3.1.1',
+48 silly cache add   scope: null,
+48 silly cache add   name: 'jquery',
+48 silly cache add   rawSpec: '^3.1.1',
+48 silly cache add   spec: '>=3.1.1 <4.0.0',
+48 silly cache add   type: 'range' }
+49 silly addNamed jquery@>=3.1.1 <4.0.0
+50 verbose addNamed ">=3.1.1 <4.0.0" is a valid semver range for jquery
+51 silly addNameRange { name: 'jquery', range: '>=3.1.1 <4.0.0', hasData: false }
+52 silly mapToRegistry name jquery
+53 silly mapToRegistry using default registry
+54 silly mapToRegistry registry https://registry.npmjs.org/
+55 silly mapToRegistry data Result {
+55 silly mapToRegistry   raw: 'jquery',
+55 silly mapToRegistry   scope: null,
+55 silly mapToRegistry   name: 'jquery',
+55 silly mapToRegistry   rawSpec: '',
+55 silly mapToRegistry   spec: 'latest',
+55 silly mapToRegistry   type: 'tag' }
+56 silly mapToRegistry uri https://registry.npmjs.org/jquery
+57 verbose addNameRange registry:https://registry.npmjs.org/jquery not in flight; fetching
+58 silly cache add args [ 'laravel-mix@^1.0', null ]
+59 verbose cache add spec laravel-mix@^1.0
+60 silly cache add parsed spec Result {
+60 silly cache add   raw: 'laravel-mix@^1.0',
+60 silly cache add   scope: null,
+60 silly cache add   name: 'laravel-mix',
+60 silly cache add   rawSpec: '^1.0',
+60 silly cache add   spec: '>=1.0.0 <2.0.0',
+60 silly cache add   type: 'range' }
+61 silly addNamed laravel-mix@>=1.0.0 <2.0.0
+62 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for laravel-mix
+63 silly addNameRange { name: 'laravel-mix', range: '>=1.0.0 <2.0.0', hasData: false }
+64 silly mapToRegistry name laravel-mix
+65 silly mapToRegistry using default registry
+66 silly mapToRegistry registry https://registry.npmjs.org/
+67 silly mapToRegistry data Result {
+67 silly mapToRegistry   raw: 'laravel-mix',
+67 silly mapToRegistry   scope: null,
+67 silly mapToRegistry   name: 'laravel-mix',
+67 silly mapToRegistry   rawSpec: '',
+67 silly mapToRegistry   spec: 'latest',
+67 silly mapToRegistry   type: 'tag' }
+68 silly mapToRegistry uri https://registry.npmjs.org/laravel-mix
+69 verbose addNameRange registry:https://registry.npmjs.org/laravel-mix not in flight; fetching
+70 silly cache add args [ 'lodash@^4.17.4', null ]
+71 verbose cache add spec lodash@^4.17.4
+72 silly cache add parsed spec Result {
+72 silly cache add   raw: 'lodash@^4.17.4',
+72 silly cache add   scope: null,
+72 silly cache add   name: 'lodash',
+72 silly cache add   rawSpec: '^4.17.4',
+72 silly cache add   spec: '>=4.17.4 <5.0.0',
+72 silly cache add   type: 'range' }
+73 silly addNamed lodash@>=4.17.4 <5.0.0
+74 verbose addNamed ">=4.17.4 <5.0.0" is a valid semver range for lodash
+75 silly addNameRange { name: 'lodash', range: '>=4.17.4 <5.0.0', hasData: false }
+76 silly mapToRegistry name lodash
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://registry.npmjs.org/
+79 silly mapToRegistry data Result {
+79 silly mapToRegistry   raw: 'lodash',
+79 silly mapToRegistry   scope: null,
+79 silly mapToRegistry   name: 'lodash',
+79 silly mapToRegistry   rawSpec: '',
+79 silly mapToRegistry   spec: 'latest',
+79 silly mapToRegistry   type: 'tag' }
+80 silly mapToRegistry uri https://registry.npmjs.org/lodash
+81 verbose addNameRange registry:https://registry.npmjs.org/lodash not in flight; fetching
+82 silly cache add args [ 'vue@^2.1.10', null ]
+83 verbose cache add spec vue@^2.1.10
+84 silly cache add parsed spec Result {
+84 silly cache add   raw: 'vue@^2.1.10',
+84 silly cache add   scope: null,
+84 silly cache add   name: 'vue',
+84 silly cache add   rawSpec: '^2.1.10',
+84 silly cache add   spec: '>=2.1.10 <3.0.0',
+84 silly cache add   type: 'range' }
+85 silly addNamed vue@>=2.1.10 <3.0.0
+86 verbose addNamed ">=2.1.10 <3.0.0" is a valid semver range for vue
+87 silly addNameRange { name: 'vue', range: '>=2.1.10 <3.0.0', hasData: false }
+88 silly mapToRegistry name vue
+89 silly mapToRegistry using default registry
+90 silly mapToRegistry registry https://registry.npmjs.org/
+91 silly mapToRegistry data Result {
+91 silly mapToRegistry   raw: 'vue',
+91 silly mapToRegistry   scope: null,
+91 silly mapToRegistry   name: 'vue',
+91 silly mapToRegistry   rawSpec: '',
+91 silly mapToRegistry   spec: 'latest',
+91 silly mapToRegistry   type: 'tag' }
+92 silly mapToRegistry uri https://registry.npmjs.org/vue
+93 verbose addNameRange registry:https://registry.npmjs.org/vue not in flight; fetching
+94 verbose request uri https://registry.npmjs.org/axios
+95 verbose request no auth needed
+96 info attempt registry request try #1 at 16:42:56
+97 verbose request id 307c6ec899f0b444
+98 http request GET https://registry.npmjs.org/axios
+99 verbose request uri https://registry.npmjs.org/bootstrap-sass
+100 verbose request no auth needed
+101 info attempt registry request try #1 at 16:42:56
+102 http request GET https://registry.npmjs.org/bootstrap-sass
+103 verbose request uri https://registry.npmjs.org/cross-env
+104 verbose request no auth needed
+105 info attempt registry request try #1 at 16:42:56
+106 http request GET https://registry.npmjs.org/cross-env
+107 verbose request uri https://registry.npmjs.org/jquery
+108 verbose request no auth needed
+109 info attempt registry request try #1 at 16:42:56
+110 http request GET https://registry.npmjs.org/jquery
+111 verbose request uri https://registry.npmjs.org/laravel-mix
+112 verbose request no auth needed
+113 info attempt registry request try #1 at 16:42:56
+114 http request GET https://registry.npmjs.org/laravel-mix
+115 verbose request uri https://registry.npmjs.org/lodash
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 16:42:56
+118 http request GET https://registry.npmjs.org/lodash
+119 verbose request uri https://registry.npmjs.org/vue
+120 verbose request no auth needed
+121 info attempt registry request try #1 at 16:42:56
+122 http request GET https://registry.npmjs.org/vue
+123 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+124 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+125 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+126 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+127 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+128 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+129 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+130 info attempt registry request try #2 at 16:43:27
+131 http request GET https://registry.npmjs.org/laravel-mix
+132 info attempt registry request try #2 at 16:43:27
+133 http request GET https://registry.npmjs.org/jquery
+134 info attempt registry request try #2 at 16:43:27
+135 http request GET https://registry.npmjs.org/lodash
+136 info attempt registry request try #2 at 16:43:27
+137 http request GET https://registry.npmjs.org/vue
+138 info attempt registry request try #2 at 16:43:27
+139 http request GET https://registry.npmjs.org/cross-env
+140 info attempt registry request try #2 at 16:43:27
+141 http request GET https://registry.npmjs.org/bootstrap-sass
+142 info attempt registry request try #2 at 16:43:27
+143 http request GET https://registry.npmjs.org/axios
+144 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+145 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+146 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+147 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+148 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+149 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+150 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 151.101.176.162:443
+151 info attempt registry request try #3 at 16:44:48
+152 http request GET https://registry.npmjs.org/lodash
+153 info attempt registry request try #3 at 16:44:48
+154 http request GET https://registry.npmjs.org/cross-env
+155 info attempt registry request try #3 at 16:44:48
+156 http request GET https://registry.npmjs.org/bootstrap-sass
+157 info attempt registry request try #3 at 16:44:48
+158 http request GET https://registry.npmjs.org/axios
+159 info attempt registry request try #3 at 16:44:48
+160 http request GET https://registry.npmjs.org/vue
+161 info attempt registry request try #3 at 16:44:48
+162 http request GET https://registry.npmjs.org/jquery
+163 info attempt registry request try #3 at 16:44:48
+164 http request GET https://registry.npmjs.org/laravel-mix
+165 verbose stack Error: connect ETIMEDOUT 151.101.176.162:443
+165 verbose stack     at Object.exports._errnoException (util.js:907:11)
+165 verbose stack     at exports._exceptionWithHostPort (util.js:930:20)
+165 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1077:14)
+166 verbose cwd X:\siscec
+167 error Windows_NT 6.1.7601
+168 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--scripts-prepend-node-path=auto"
+169 error node v4.6.1
+170 error npm  v2.15.9
+171 error code ETIMEDOUT
+172 error errno ETIMEDOUT
+173 error syscall connect
+174 error network connect ETIMEDOUT 151.101.176.162:443
+174 error network This is most likely not a problem with npm itself
+174 error network and is related to network connectivity.
+174 error network In most cases you are behind a proxy or have bad network settings.
+174 error network
+174 error network If you are behind a proxy, please make sure that the
+174 error network 'proxy' config is set properly.  See: 'npm help config'
+175 verbose exit [ 1, true ]

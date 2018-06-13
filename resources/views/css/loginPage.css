@@ -1,0 +1,140 @@
+#pageLoginView{
+    width: 100%;
+    height:  100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    position: fixed;
+    overflow: auto;
+    background: #37474f;
+    display: none;
+}
+#pageMainView{
+    display: none;
+}
+.card-container.card {
+    max-width: 500px;
+}
+
+.card {
+
+    margin: 0 auto 25px;
+    margin-top: 15%;
+}
+
+.paddingTop {
+    padding-top: 10%;
+}
+
+.padding5 {
+    padding-left: 5px;
+}
+
+.bemVindo {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.sisName {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.loginForm {
+    text-align: center;
+    width: 340px;
+    height: 240px;
+    background: url("../img/loginBackground.svg");
+    background-position: 0px 0px;
+    background-size: 340px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 23px;
+    padding-left: 13px;
+}
+
+.inputCuston {
+    width: 280px;
+    height: 40px;
+    border: solid rgba(255, 255, 255, 0.81) 1px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+    outline: none;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-right: 10px;
+}
+
+.inputCuston:focus {
+    outline: none !important;
+    border: solid #428AC9 1px !important;
+    box-shadow: none !important;
+}
+
+.btnCuston {
+    outline: none;
+    width: 280px;
+    height: 40px;
+    background: #428AC9;
+    border-radius: 5px;
+    border: none;
+    color: rgba(255, 255, 255, 0.81);
+    cursor: pointer;
+}
+.btnCuston:hover{
+    background: #386ea3;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+
+.right-inner-addon input {
+    padding-right: 30px;
+}
+
+.right-inner-addon i {
+    position: absolute;
+    top: 2px;
+    right: 50px;
+    padding: 10px 12px;
+    pointer-events: none;
+    color: #BFC5CA;
+}
+
+.recoveryPass {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+#login:focus + #iconUser {
+    /*color: #428AC9;*/
+}
+
+#senha:focus + #iconPassword {
+    /*color: #428AC9;*/
+}
+
+.sessionTimeout{
+    padding-top: 15px;
+}
+.sessionTimeout i{
+    font-size: 12px;
+    padding-right: 4px;
+}
